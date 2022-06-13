@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="dangnhap.css">
+</head>
+<body>
+    <style>
+        form {
+    width: 25%;
+    min-width: 250px;
+    box-shadow: 0 0 5px rgb(128, 128, 128);
+    padding: 50px;
+    margin:auto;
+    background-color: white;
+    color: brown;
+    border: 3px solid red;
+    position: absolute;
+    top: 200px;
+    left: 400px;
+}
+#tendangnhap{
+    text-align: center;
+}
+  .hinhquaylai img{
+    position: absolute;
+    top: 20px;
+    left: 10px;
+
+}
+    </style>
+
+
+    <div class="hinhquaylai">
+        <a href="index.html"><img src="Images/muiten.jpg" width="50px" height="50px"   alt=""></a>
+    </div>
+    <form action="" method="post">
+        <div class="form">
+            
+            <h2 align="center"id="trangdangnhap">Đăng nhập</h2>
+        
+            <div>Tên Đăng Nhập: </div>
+            <input type="text">
+        </div>
+        <div class="form">
+            <label>
+            <div>Mật Khẩu: </div>
+            <span></span>
+            <input type="password" name="password" class="d_input form-control">
+            </label>
+        </div>
+        <div class="form">
+            <input type="checkbox" name="fr" id="Remember me?" checked><label for="Remember me?">Remember me?</label>
+        </div>
+        <hr>
+        <input type="submit" value="Login">
+
+    </form>
+</body>
+</html>

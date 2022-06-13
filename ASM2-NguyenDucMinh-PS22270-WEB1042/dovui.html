@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="ASM.css">
+    <script src="dovui.js"></script>
+    <style >
+        .dovui{
+            width: 500px;
+            font-size: 22px;
+            text-align: center;
+            border-radius: 15px;
+            background-color: brown;
+            margin: auto;
+            color: white;
+            border: solid 2px white;
+        }
+        form input[id]{
+            width: 200px;
+            text-align: center;
+            padding: 6px 0;
+            border: solid 1px black;
+            background-color: blanchedalmond;
+        }
+        form button{
+            width: 120px;
+            height: 40px;
+        }
+        #ketqua{
+            height: 150px;
+            margin: 10px 50px 0 50px;
+            border: 1px double white;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="hinhquaylai">
+        <a href="index.html"><img src="Images/muiten.jpg" width="50px" height="50px"   alt=""></a>
+    </div>
+    <div class="dovui">
+        <h1>GIẢI PHƯƠNG TRÌNH ax<sup>2</sup>+bx+c=0</h1>
+        <p>Số Lần Giải : <span id="solangiai"></span></p>
+        <hr>
+        <form>
+            <p><span>Nhập a</span> <input id="a" disabled></p>
+            <p><span>Nhập b</span> <input id="b" disabled></p>
+            <p><span>Nhập c</span> <input id="c" disabled></p>
+            <button id="giaipt" onclick="giai();dem();lockbutton(true);" disabled>Giải PT</button>
+            <button type="button" id="chonso" onclick="random();lockbutton(false);">Chọn Số</button>
+        </form>
+        <div id="ketqua"></div>
+        <div id="time"></div>
+    </div>
+    
+        <footer>FPT Polytechnic © 2022. All rights reserved.</footer>
+    
+</body>
+
+</html>

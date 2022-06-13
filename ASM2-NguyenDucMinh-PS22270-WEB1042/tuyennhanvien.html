@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kiểm lỗi Form nhân viên</title>
+</head>
+<style>
+    h2{
+        text-align: center;
+        padding-bottom: 5%;
+    }
+    /*form{
+        width: 1000px;
+        margin: auto;
+        font-family: 'Roboto';
+        color: rgb(244, 32, 17);
+        border: 1px solid rgb(18, 8, 120);
+        box-shadow: 2px 2px 2px rgb(0, 139, 130);
+    }*/
+    form {
+    min-width: 300px;
+    box-shadow: 0 0 5px rgb(128, 128, 128);
+    padding: 50px;
+    margin:auto;
+    background-color: aquamarine;
+    color: brown;
+    border: 3px solid red;
+    position: absolute;
+    box-shadow: 2px 2px 2px rgb(0, 139, 130);
+    left:500px;
+     }
+    h4{
+        text-align: center;
+    }
+    input{
+        background-color: rgb(221, 222, 135);
+    }
+</style>
+<body>
+    <a href="index.html">Quay lại</a>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <form name="frm1" class="col9..primary" onsubmit="return kiemtra()">
+        <h4 class="m0..text-center">Đăng Kí Thành Viên</h4>
+        <div class="form-group">
+            <label for="">Họ tên: </label><br><input type="text" name="ht" class="form-warning">
+        </div>
+        <div class="form-group">
+            <label for="">Số CMND: </label><br><input type="text" name="cmnd" id="form-primary">
+        </div>
+        
+            <div> Giới tính:</div>
+            <input type="radio" name="gt" id="Nam"checked> <label for="Nam">Nam</label>
+            <input type="radio" name="gt" id="Nữ"checked> <label for="Nữ">Nữ</label>
+            </div>
+            <div class="formgroup">
+            <div>Hình ảnh:</div>
+            <input type="file" name="" id>
+            </div>
+        <div class="form-group">
+            <label for="">Tỉnh</label>
+            <select name="tinh" class="form-info">
+                <br><option value="0">Chọn tỉnh</option></br>
+                <option value="1">TPHCM</option>
+                <option value="2">Hà Nội</option>
+                <option value="3">Đồng Nai</option>
+                <option value="3">Bình Dương</option>
+                <option value="3">Vũng Tàu</option>
+
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="">Thông tin bổ sung: </label> <br>
+            <textarea name="bosung" class="form-warning" cols="50" rows="4"></textarea>
+        </div>
+        <div class="form-group">
+            <div id="loi"></div> <button class="btn..primary">Lưu thông tin</button>
+        </div>
+    </form>
+
+    <script>
+        function kiemtra() {
+            var ht = document.frm1.ht.value;
+            var cmnd = document.frm1.cmnd.value;
+            var tinh = document.frm1.tinh.value;
+            var bosung = document.frm1.bosung.value;
+            var loi = "";
+            if (ht.length < 3 || ht.length > 30) {
+                loi = loi + "Họ tên bạn phải nhập từ 3-->30 kí tự<br>";
+            }
+            if (cmnd.length != 9) {
+                loi = loi + "CMND có 9 kí tự<br>";
+            }
+            var s = parseInt(cmnd);
+            if (tinh == 0) {
+                loi = loi + "Bạn chưa chọn tỉnh kìa<br>";
+            }
+            if (bosung.length < 50 || bosung.length > 1000) {
+                loi = loi + "THông tin bổ sung khoảng 50-1000 kí tự";
+            }
+            if (loi.length > 0) {
+                document.getElementById("loi").innerHTML = loi;
+            }
+            return false;
+        }
+    </script>
+</body>
+
+</html>
+</body>
+</html>

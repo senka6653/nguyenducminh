@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Document</title>
+</head>
+<style>
+     form {
+    width: 25%;
+    min-width: 200px;
+    box-shadow: 0 0 5px rgb(128, 128, 128);
+    padding: 50px;
+    margin:auto;
+    background-color: aquamarine;
+    color: brown;
+    border: 3px solid red;
+    position: absolute;
+    top: 200px;
+    left: 500px;
+     }
+    .hinhquaylai img{
+    position: absolute;
+    top: 20px;
+    left: 10px;
+
+}
+</style>
+<body>
+   
+    <div class="hinhquaylai">
+        <a href="index.html"><img src="Images/muiten.jpg" width="50px" height="50px"   alt=""></a>
+    </div>
+ <form action="" method="post">
+    <div class="formgroup">
+        <h2 align="center"id="trangdangnhap">Đăng kí</h2>
+    <div>Họ và tên:</div>
+    <input type="text">
+    <div class="formgroup">
+    <div> Giới tính:</div>
+    <input type="radio" name="gt" id="Nam"checked> <label for="Nam">Nam</label>
+    <input type="radio" name="gt" id="Nữ"checked> <label for="Nữ">Nữ</label>
+    </div>
+    <div class="formgroup">
+    <div>Hình ảnh:</div>
+    <input type="file" name="" id>
+    </div>
+
+<div class="formgroup">
+<div>Quốc tịch:</div>
+<select name="id=">
+<option value="">Việt Nam</option>
+<option value="">Lào</option>
+<option value="">Anh Quốc</option>
+<option value="">Brazil</option>
+<option value="">France</option>
+<option value="">Canada</option>
+</select>
+
+</div>
+<div class="formgroup">
+<div>Mẫu Giày:</div>
+<input type="checkbox" name="st" id="Phim" checked><label for="Phim">Giày Nam</label>
+<input type="checkbox" name="st" id="Game" checked><label for="Game">Giày nữ</label>
+<input type="checkbox" name="st" id="Nghe Nhạc" checked><label for="Nghe nhạc">Dép Nam</label>
+
+
+
+</div>
+<div class="formgroup">
+<div>Ghi chú:</div>
+<textarea name="id" cols="20" rows="5"></textarea>
+
+</div>
+<input type="submit" value="Đăng kí">
+<input type="reset" value="Nhập lại">
+</form>
+</body>
+</html>

@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ASM1-NGUYENDUCMINH-PS22270</title>
+    <script src="index.js">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
+
+
+        
+    </script>
+    <style>
+        /*css phần đầu */
+        .menu>ul>li{
+        position: relative;
+        display: inline-block;
+    }
+    .menu ul{
+        padding: 0px;
+        margin: 0px;
+        list-style: none;
+        border-radius: 3px;
+        background-color: rgb(207, 207, 207);
+        text-align: right;
+    }
+    
+     .menu ul ul{
+        position: absolute;
+        display: none;
+        padding: 0px;
+        margin: 0px;
+        list-style: none;
+        border-radius: 3px;
+        width: 200px;
+        background-color: white;
+        box-shadow: 0 0 1px gray;
+    }
+    
+    .menu ul ul a{
+        display: block;
+        line-height: 30px;
+        color: rgb(132, 0, 255);
+        text-decoration: none;
+        font-variant: Sans-serif;
+        font-size: larger;
+        padding: 0 10px;
+    }
+    
+    .menu>ul>li:hover>ul{
+        display: block;
+    }
+    .menu ul li a{
+        display: block;
+        text-decoration: none;
+        font-variant: Sans-serif;
+        font-size: larger;
+        color: rgb(255, 68, 0);
+        padding: 0 10px;
+        line-height: 70px;
+    }
+    
+    .menu ul li a:hover{
+        background-color: rgb(39, 40, 39);
+        color: gray;
+    }
+    
+    .menu ul li a:hover{
+        color: yellow;
+    } 
+    
+    
+    .logo{
+        position: absolute;
+        left: 40px;
+        bottom: 40px;
+    }
+    
+
+    
+    
+    
+    /* css cho dung */
+    .dung{
+        padding:0px;
+        margin:0%;
+        list-style:none;
+        border-radius:3px;
+        box-shadow:0 0 2px gray;
+        height: 690px;
+    }
+    .dung a{
+        background: url('../img/visual.png') no-repeat 0px center;
+        display: block;
+        border-bottom: 1px dotted orangered;
+        color: orangered;
+        font-variant: Sans-serif;
+        font-size: larger;
+        text-decoration: none;
+        padding: 8px 5px 8px 35px;
+    }
+    .dung a:hover{
+        border-bottom: 1px dotted white;
+        background-color: orangered;
+        color: yellow;
+        font-weight: bold;
+    }
+    .lienhe{
+        text-align: center;
+        color: red;
+    }
+    .lienhe1{
+        text-align: center;
+        color: red;
+      
+    }
+
+
+    /* css phần sau */
+    body{
+        padding: 0;
+        margin: 0;
+    }
+    .container{
+        max-width: 2000px;
+        height: 50%;
+        text-align: left;
+        margin: 0 auto;
+    }
+    header{
+        
+        background-size: 100% 100%;
+        padding-bottom: 50%;
+        background-color: rgb(207, 207, 207);
+        padding: 15px;
+        height: 310px;
+    }
+    nav{
+        line-height: 40px;
+        background-color: orangered;
+        color:white;
+        text-align: left;
+        font-variant: Sans-serif;
+        }
+    aside{
+        height: 700px;
+        width: 25%;
+        float:right;
+    }
+    article{
+        background-color:white;
+        height: 100px;
+        width: 75%;
+        float:left;
+    }
+    footer{
+        border-top: 5px double orangered;
+        line-height: 50px;
+        clear: both;
+        background-color: lightcyan;
+        text-align: center;
+        font-variant: Sans-serif;
+    }
+    nav>a{
+        color:white;
+        text-decoration: none;
+        margin: 0 10px;
+        }
+    nav>a:hover{
+    color: yellow;
+    }
+    
+    aside>ul>li{
+        text-align:left;
+    }
+    iframe{
+        width: 100%;
+        height: 690px;
+    }
+    /* logo */
+    .container .logo{
+    position: absolute;
+    top: 5px;
+    left: 10px;
+   }   
+   .container .logo img{
+    height: 50px;
+}
+/* banner */
+.danhmuc .banner{
+    width: 70%;
+    height: 300px;
+    float: right;
+    
+}
+.danhmuc .banner img{
+    width: 100%;
+    height: 300px;
+    border-radius: 5px;
+}
+
+/* danh mục sản phẩm */
+.danhmuc .danhmucsp{
+    width: 25%;
+    float: left;
+    height: 300px;
+    background-color: white;
+    border-radius: 5px;
+}
+.danhmuc .danhmucsp p{   
+    padding: 20px;
+    text-transform: uppercase;
+}
+.danhmuc .danhmucsp h2{
+    margin-left: 15px   ;
+}
+.danhmuc .danhmucsp p:hover{
+    text-transform: uppercase;
+    color: rgb(0, 225, 255);
+    
+}
+
+
+/* css phan gio hang */
+.container1 {
+    width: 400px;
+    margin: auto;
+    background: rgb(170, 170, 170);
+    padding: 20px;
+    font-size: 1.2em;
+    height: 500px;
+    top: 5000px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th,
+td {
+    border: 1px solid black;
+    padding: 6px;
+    text-align: center;
+    color: rgb(184, 21, 21);
+}
+
+caption {
+    font-weight: 600;
+    font-size: 1.2em;
+    color: white;
+}
+
+h3 {
+    text-align: center;
+    color: yellow;
+}
+
+button {
+    width: 60px;
+    height: 25px;
+}
+
+    </style>    
+</head>
+<body>
+<!-- css trang chủ -->
+
+<!-- Code trang chủ -->
+
+<div class="container">
+    <div class="logo">
+        <img src="Images/logogiay.jpg"></img>
+
+    </div>
+    
+        <nav class="menu">
+            <ul>
+                <li><div id="time"></div></li>
+                <li>
+                    <a href="index.html">Trang chủ</a>
+                    <ul>
+                        <li><a href="">Đăng Nhập</a></li>
+                        <li><a href="tuyennhanvien.html">Đăng Kí</a></li>
+                        <li><a href="seach.html">Tìm Kiếm</a></li>
+                    </ul>
+                
+                </li>
+
+                <li><a href="gioithieu.html">Giới thiệu</a></li>
+                <li>
+                    <a href="#">Liên hệ</a>
+                    <ul>
+                        <li><a href="">Số Điện Thoại</a></li>
+                        <li><a href="">Địa Chỉ</a></li>
+                    </ul>
+                </li>
+                <li><a href="giohang1.html">Giỏ Hàng</a></li>
+                <li><a href="giohang.html">Tìm Kiếm</a></li>
+                <!-- <li><a href="dovui.html">Đố Vui</a></li> -->
+
+            </ul>
+        </nav>
+
+</div>
+    
+ <!-- Code header -->   
+    <header>
+        <div class="danhmuc">
+            <div class="danhmucsp">
+                <h2>Danh Mục Giày</h2>
+                <p><a href="danhsachsanpham.html">Giày Nam</a></p>
+                <p>Dép Nam</p>
+                <p>Phụ Kiện Cho NAM</p>
+            </div>
+            <div class="banner">
+                <img id = "anh" src = "Images/giayboot(dssp).jpg" alt = "" width="450" height="400"><br/>
+        </div>
+    </header>
+        
+    <article>
+        <div class="container1">
+       
+            <table>
+                <caption>Các Sản Phẩm Shop</caption>
+                <thead>
+                    <tr>
+                        <th><input type="checkbox" id="selectall"></th>
+                        <th>Tên Giày</th>
+                        <th>Giá</th>
+                        <th>Mua</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><input type="checkbox" class="chon" checked onchange="daott(this)"></td>
+                        <td>GiÀY BOOT</td>
+                        <td>600.000đ/1 đôi</td>
+                        <td><button onclick="them(this)" onchange="daott(this)">Chọn</button></td>
+                    </tr>
+                <tbody>
+                    <tr>
+                        <td><input type="checkbox" class="chon" checked onchange="daott(this)"></td>
+                        <td>Giày Âu</td>
+                        <td>200.000đ/1 đôi</td>
+                        <td><button onclick="them(this)" onchange="daott(this)">Chọn</button></td>
+                    </tr>
+                <tbody>
+                    <tr>
+                        <td><input type="checkbox" class="chon" checked onchange="daott(this)"></td>
+                        <td>Giày Nam </td>
+                        <td>500.000đ/1 đôi</td>
+                        <td><button onclick="them(this)" onchange="daott(this)">Chọn</button></td>
+                    </tr>
+                <tbody>
+                    <tr>
+                        <td><input type="checkbox" class="chon" checked onchange="daott(this)"></td>
+                        <td>Bitis</td>
+                        <td>200.000đ/1 đôi</td>
+                        <td><button onclick="them(this)" onchange="daott(this)">Chọn</button></td>
+                    </tr>
+                <tbody>
+                    <tr>
+                        <td><input type="checkbox" class="chon" checked onchange="daott(this)"></td>
+                        <td>Giày Lười</td>
+                        <td>250.000đ/1 đôi</td>
+                        <td><button onclick="them(this)" onchange="daott(this)">Chọn</button></td>
+                    </tr>
+                </tbody>
+            </table>
+            <hr width="75%" style="margin-left:100px">
+            <table id="cart">
+                <caption>giỏ hàng của bạn</caption>
+            </table>
+            <script>
+                document.getElementById("cart").style.display = "none";
+            </script>
+            <h3 id="tongtien">Hóa đơn của bạn là: <span id="tong"></span></h3>
+            <script>
+                document.getElementById("tongtien").style.display = "none";
+            </script>
+        </div>
+        <script>
+            function them(button) {
+                var row = button.parentElement.parentElement.cloneNode(true);
+                var btnxoa = row.getElementsByTagName("button")[0];
+                btnxoa.innerText = "xoá";
+                btnxoa.setAttribute('onclick', 'xoa(this)');
+                document.getElementById("cart").appendChild(row);
+                tinhtong();
+                document.getElementById("cart").style.display = "";
+                document.getElementById("tongtien").style.display = "";
+            }
+            function xoa(button) {
+                var row = button.parentElement.parentElement;
+                document.getElementById("cart").removeChild(row);
+                tinhtong();
+            }
+            function tinhtong() {
+                var cart = document.getElementById("cart");
+                var rows = cart.getElementsByTagName("tr");
+                var tong = 0;
+                for (var i = 0; i < rows.length; i++) {
+                    var giatien = rows[i].children[2].innerText;
+                    giatien = parseInt(giatien);
+                    tong += giatien;
+                }
+                document.getElementById("tong").innerText = tong + ".000 đồng";
+            }
+            function daott(obj) {
+                var row = obj.parentElement.parentElement;
+                var btn = row.getElementsByTagName("button")[0];
+                btn.disabled = !btn.disabled;
+            }
+        </script>
+        </div>
+    </article>
+
+    <aside>
+        <ul class="dung">
+             <li><a href="dangnhap2.html">Đăng nhập</a></li>
+            <li><a href="dangki.html">Đăng kí</a></li>
+             <li><a href="#">Hướng dẫn mua hàng</a></li>
+             <li><a href="#">Săn mã sale</a></li>
+             <li><a href="danhsachsanpham.html">Giày nam hot</a></li>
+            <li><a href="tuyennhanvien.html">Ứng Tuyển Nhân Viên</a></li>
+            <li>
+                <br><div class="lienhe1"><h4>GIÀY NAM GIÁ RẺ</h4></div></li>
+            <li><h4>
+                    
+                    + Email: sale@giaygiare.com<br>
+                    <br>
+                    + Hotline: 090 090 0900 - 076 830 3333<br>
+                    <br>
+                    + Website: giaygiare.cmn <br>
+                    <br>
+                    <div class="lienhe">CHÍNH SÁCH HỖ TRỢ</div><br>
+                    + Hình thức thanh toán<br>
+                    <br>
+                    + Hỗ trợ đổi trả<br>
+                    <br>
+                    + Mua và Giao hàng<br>
+                    <br>
+                    + Quy định chung<br>
+                    <br>
+                    + Bảo mật thông tin<br></h4></li>
+            </ul>
+        </aside>
+        
+        <footer>FPT Polytechnic © 2022. All rights reserved.</footer>
+    </div>
+</body>
+
+</html>
+
